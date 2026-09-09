@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Virtual Lab | Virtual Science Lab</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">🧪 Virtual Science Lab</div>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    <nav id="nav">
+        <a href="index.html">Home</a>
+        <a href="experiments.html">Experiments</a>
+        <a href="lab.html" class="active">Virtual Lab</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="about.html">About</a>
+    </nav>
+
+    <button class="theme-btn" onclick="toggleTheme()">🌙</button>
+
+</header>
+
+
+<main>
+
+<section class="page-header">
+
+    <p class="eyebrow">INTERACTIVE SIMULATION</p>
+
+    <h1>Virtual Experiment Lab</h1>
+
+    <p>
+        Change the values and observe the results instantly.
+    </p>
+
+</section>
+
+
+<!-- EXPERIMENT NAVIGATION -->
+
+<div class="lab-navigation">
+
+    <a href="#ohm" class="lab-link active">
+        ⚡ Ohm's Law
+    </a>
+
+    <a href="#ph" class="lab-link">
+        🧪 Acid & Base
+    </a>
+
+    <a href="#lens" class="lab-link">
+        🔭 Convex Lens
+    </a>
+
+    <a href="#circuit" class="lab-link">
+        🔌 Circuits
+    </a>
+
+</div>
+
+
+<!-- ================================= -->
+<!-- OHM'S LAW -->
+<!-- ================================= -->
+
+<section class="lab-section" id="ohm">
+
+    <div class="lab-title">
+
+        <span class="badge">PHYSICS</span>
+
+        <h2>⚡ Ohm's Law Experiment</h2>
+
+        <p>
+            Investigate the relationship between voltage,
+            resistance and current.
+        </p>
+
+    </div>
+
+
+    <div class="lab-layout">
+
+
+        <!-- CONTROLS -->
+
+        <div class="lab-card">
+
+            <h3>Experiment Controls</h3>
+
+            <div class="control-group">
+
+                <label>
+                    Voltage
+
+                    <strong>
+                        <span id="voltageValue">10</span> V
+                    </strong>
+                </label>
+
+                <input
+                    type="range"
+                    id="voltage"
+                    min="1"
+                    max="20"
+                    value="10"
+                >
+
+            </div>
+
+
+            <div class="control-group">
+
+                <label>
+                    Resistance
+
+                    <strong>
+                        <span id="resistanceValue">5</span> Ω
+                    </strong>
+                </label>
+
+                <input
+                    type="range"
+                    id="resistance"
+                    min="1"
+                    max="50"
+                    value="5"
+                >
+
+            </div>
+
+
+            <div class="formula-box">
+
+                <span>Ohm's Law</span>
+
+                <strong>
+                    I = V / R
+                </strong>
+
+            </div>
+
+
+            <div class="result-box">
+
+                <small>CALCULATED CURRENT</small>
+
+                <strong>
+                    <span id="currentValue">2.00</span> A
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- SIMULATION -->
+
+        <div class="lab-card">
+
+            <h3>Virtual Circuit</h3>
+
+            <div class="circuit-display">
+
+                <div class="component">
+                    🔋
+                    <small>Battery</small>
+                </div>
+
+                <div class="wire"></div>
+
+                <div class="component">
+                    Ω
+                    <small>Resistor</small>
+                </div>
+
+                <div class="wire"></div>
+
+                <div class="component">
+                    <span id="meterValue">2.00</span>
+                    <small>Ammeter</small>
+                </div>
+
+            </div>
+
+
+            <div class="observation">
+
+                <h3>Observation</h3>
+
+                <p>
+                    When voltage increases, current increases
+                    if resistance remains constant.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================= -->
+<!-- ACID BASE -->
+<!-- ================================= -->
+
+<section class="lab-section" id="ph">
+
+    <div class="lab-title">
+
+        <span class="badge">CHEMISTRY</span>
+
+        <h2>🧪 Acid & Base Experiment</h2>
+
+        <p>
+            Select a solution and observe its approximate pH.
+        </p>
+
+    </div>
+
+
+    <div class="lab-layout">
+
+
+        <div class="lab-card">
+
+            <h3>Select Solution</h3>
+
+            <select id="solution">
+
+                <option value="2">
+                    Lemon Juice
+                </option>
+
+                <option value="3">
+                    Vinegar
+                </option>
+
+                <option value="7">
+                    Pure Water
+                </option>
+
+                <option value="8">
+                    Baking Soda Solution
+                </option>
+
+                <option value="10">
+                    Soap Solution
+                </option>
+
+                <option value="13">
+                    Strong Base Simulation
+                </option>
+
+            </select>
+
+
+            <div class="ph-scale">
+
+                <span>0</span>
+                <span>7</span>
+                <span>14</span>
+
+            </div>
+
+
+            <div class="ph-indicator">
+
+                <div
+                    id="phMarker"
+                    class="ph-marker">
+                </div>
+
+            </div>
+
+
+            <div class="result-box">
+
+                <small>APPROXIMATE pH</small>
+
+                <strong id="phValue">2</strong>
+
+                <span id="phType">
+                    Strongly Acidic
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="lab-card">
+
+            <h3>🧪 Virtual Beaker</h3>
+
+            <div class="beaker">
+
+                <div
+                    id="liquid"
+                    class="liquid">
+                </div>
+
+            </div>
+
+            <p
+                id="indicatorText"
+                class="center">
+                The solution is acidic.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================= -->
+<!-- CONVEX LENS -->
+<!-- ================================= -->
+
+<section class="lab-section" id="lens">
+
+    <div class="lab-title">
+
+        <span class="badge">PHYSICS</span>
+
+        <h2>🔭 Convex Lens Experiment</h2>
+
+        <p>
+            Change focal length and object distance
+            to calculate image formation.
+        </p>
+
+    </div>
+
+
+    <div class="lab-layout">
+
+
+        <div class="lab-card">
+
+            <h3>Experiment Controls</h3>
+
+            <div class="control-group">
+
+                <label>
+
+                    Focal Length
+
+                    <strong>
+                        <span id="focalValue">10</span> cm
+                    </strong>
+
+                </label>
+
+                <input
+                    type="range"
+                    id="focal"
+                    min="5"
+                    max="30"
+                    value="10"
+                >
+
+            </div>
+
+
+            <div class="control-group">
+
+                <label>
+
+                    Object Distance
+
+                    <strong>
+                        <span id="objectValue">30</span> cm
+                    </strong>
+
+                </label>
+
+                <input
+                    type="range"
+                    id="objectDistance"
+                    min="12"
+                    max="100"
+                    value="30"
+                >
+
+            </div>
+
+
+            <div class="formula-box">
+
+                <span>Lens Formula</span>
+
+                <strong>
+                    1/f = 1/v − 1/u
+                </strong>
+
+            </div>
+
+
+            <div class="result-box">
+
+                <small>IMAGE DISTANCE</small>
+
+                <strong>
+                    <span id="imageDistance">15.00</span> cm
+                </strong>
+
+                <span>
+                    Magnification:
+                    <b id="magnification">-0.50</b>
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <div class="lab-card">
+
+            <h3>🔭 Lens Simulation</h3>
+
+            <div class="lens-simulation">
+
+                <div class="lens-axis"></div>
+
+                <div class="convex-lens">
+                    )(
+                </div>
+
+                <div class="object-arrow">
+                    ↑
+                </div>
+
+                <div class="image-arrow">
+                    ↓
+                </div>
+
+            </div>
+
+            <p class="center">
+                The diagram represents a simplified
+                convex-lens simulation.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================= -->
+<!-- SERIES PARALLEL -->
+<!-- ================================= -->
+
+<section class="lab-section" id="circuit">
+
+    <div class="lab-title">
+
+        <span class="badge">PHYSICS</span>
+
+        <h2>🔌 Series & Parallel Circuit</h2>
+
+        <p>
+            Compare equivalent resistance in two
+            different circuit arrangements.
+        </p>
+
+    </div>
+
+
+    <div class="lab-layout">
+
+
+        <div class="lab-card">
+
+            <h3>Resistor Controls</h3>
+
+            <div class="control-group">
+
+                <label>
+
+                    R₁
+
+                    <strong>
+                        <span id="r1Value">10</span> Ω
+                    </strong>
+
+                </label>
+
+                <input
+                    type="range"
+                    id="r1"
+                    min="1"
+                    max="50"
+                    value="10"
+                >
+
+            </div>
+
+
+            <div class="control-group">
+
+                <label>
+
+                    R₂
+
+                    <strong>
+                        <span id="r2Value">20</span> Ω
+                    </strong>
+
+                </label>
+
+                <input
+                    type="range"
+                    id="r2"
+                    min="1"
+                    max="50"
+                    value="20"
+                >
+
+            </div>
+
+
+            <div class="control-group">
+
+                <label>
+
+                    Voltage
+
+                    <strong>
+                        <span id="circuitVoltageValue">12</span> V
+                    </strong>
+
+                </label>
+
+                <input
+                    type="range"
+                    id="circuitVoltage"
+                    min="1"
+                    max="24"
+                    value="12"
+                >
+
+            </div>
+
+
+            <div class="circuit-buttons">
+
+                <button
+                    id="seriesButton"
+                    class="circuit-btn selected">
+                    Series
+                </button>
+
+                <button
+                    id="parallelButton"
+                    class="circuit-btn">
+                    Parallel
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <div class="lab-card">
+
+            <h3>🔌 Circuit Result</h3>
+
+            <div class="result-box">
+
+                <small>
+                    EQUIVALENT RESISTANCE
+                </small>
+
+                <strong>
+                    <span id="equivalentResistance">
+                        30.00
+                    </span> Ω
+                </strong>
+
+                <span>
+                    Total Current:
+                    <b id="totalCurrent">0.40</b> A
+                </span>
+
+            </div>
+
+
+            <div class="observation">
+
+                <h3>Formula</h3>
+
+                <p id="circuitFormula">
+                    Series:
+                    R = R₁ + R₂
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SAFETY NOTE -->
+
+<section class="info-section">
+
+    <div class="info-box">
+
+        <div class="info-icon">
+            💡
+        </div>
+
+        <div>
+
+            <h2>Learning Note</h2>
+
+            <p>
+                These experiments are educational simulations.
+                They demonstrate scientific relationships using
+                mathematical calculations and should not be
+                considered substitutes for supervised laboratory work.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <p>© 2026 Virtual Science Lab</p>
+
+    <p>BSc IT Web Development Project</p>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

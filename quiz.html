@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz | Virtual Science Lab</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        🧪 Virtual Science Lab
+    </div>
+
+    <button class="menu-btn"
+            onclick="toggleMenu()">
+        ☰
+    </button>
+
+    <nav id="nav">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="experiments.html">
+            Experiments
+        </a>
+
+        <a href="lab.html">
+            Virtual Lab
+        </a>
+
+        <a href="quiz.html"
+           class="active">
+            Quiz
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+    </nav>
+
+    <button class="theme-btn"
+            onclick="toggleTheme()">
+        🌙
+    </button>
+
+</header>
+
+
+<main>
+
+
+<!-- PAGE TITLE -->
+
+<section class="page-header">
+
+    <p class="eyebrow">
+        KNOWLEDGE CHECK
+    </p>
+
+    <h1>
+        Science Quiz
+    </h1>
+
+    <p>
+        Test what you have learned from
+        the Virtual Science Lab.
+    </p>
+
+</section>
+
+
+<!-- QUIZ -->
+
+<section class="quiz-container">
+
+<form id="scienceQuiz">
+
+
+<!-- QUESTION 1 -->
+
+<div class="question-card">
+
+    <h3>
+        1. What is the SI unit of electric current?
+    </h3>
+
+    <label>
+        <input type="radio"
+               name="q1"
+               value="A">
+        Volt
+    </label>
+
+    <label>
+        <input type="radio"
+               name="q1"
+               value="B">
+        Ampere
+    </label>
+
+    <label>
+        <input type="radio"
+               name="q1"
+               value="C">
+        Ohm
+    </label>
+
+    <label>
+        <input type="radio"
+               name="q1"
+               value="D">
+        Watt
+    </label>
+
+</div>
+
+
+<!-- QUESTION 2 -->
+
+<div class="question-card">
+
+    <h3>
+        2. Which equation represents Ohm's Law?
+    </h3>
+
+    <label>
+        <input type="radio"
+               name="q2"
+               value="A">
+        V = I × R
+    </label>
+
+    <label>
+        <input type="radio"
+               name="q2"
+               value="B">
+        P = m × g
+    </label>
+
+    <label>
+        <input type="radio"
+               name="q2"
+               value="C">
+        F = m × a
+    </label>
+
+    <label>
+        <input type="radio"
+               name="q2"
+               value="D">
+        E = mc²
+    </label>
+
+</div>
+
+
+<!-- QUESTION 3 -->
+
+<div class="question-card">
+
+    <h3>
+        3. A solution with pH 3 is:
+    </h3>
+
+    <label>
+        <input type="radio"
+               name="q3"
+               value="A">
+        Acidic
+    </label>
+
+    <label>
+        <input type="radio"
+               name="q3"
+               value="B">
+        Neutral
+    </label>
+
+    <label>
+        <input type="radio"
+               name="q3"
+               value="C">
+        Basic
+    </label>
+
+    <label>
+        <input type="radio"
+               name="q3"
+               value="D">
+        Cannot be determined
+    </label>
+
+</div>
+
+
+<!-- QUESTION 4 -->
+
+<div class="question-card">
+
+    <h3>
+        4. What is the SI unit of electrical resistance?
+    </h3>
+
+    <label>
+        <input type="radio"
+               name="q4"
+               value="A">
+        Ampere
+    </label>
+
+    <label>
+        <input type="radio"
+               name="q4"
+               value="B">
+        Volt
+    </label>
+
+    <label>
+        <input type="radio"
+               name="q4"
+               value="C">
+        Ohm
+    </label>
+
+    <label>
+        <input type="radio"
+               name="q4"
+               value="D">
+        Joule
+    </label>
+
+</div>
+
+
+<!-- QUESTION 5 -->
+
+<div class="question-card">
+
+    <h3>
+        5. Which instrument measures electric current?
+    </h3>
+
+    <label>
+        <input type="radio"
+               name="q5"
+               value="A">
+        Voltmeter
+    </label>
+
+    <label>
+        <input type="radio"
+               name="q5"
+               value="B">
+        Ammeter
+    </label>
+
+    <label>
+        <input type="radio"
+               name="q5"
+               value="C">
+        Barometer
+    </label>
+
+    <label>
+        <input type="radio"
+               name="q5"
+               value="D">
+        Thermometer
+    </label>
+
+</div>
+
+
+<!-- QUESTION 6 -->
+
+<div class="question-card">
+
+    <h3>
+        6. A convex lens is generally:
+    </h3>
+
+    <label>
+        <input type="radio"
+               name="q6"
+               value="A">
+        Thicker at the centre
+    </label>
+
+    <label>
+        <input type="radio"
+               name="q6"
+               value="B">
+        Thinner at the centre
+    </label>
+
+    <label>
+        <input type="radio"
+               name="q6"
+               value="C">
+        Completely flat
+    </label>
+
+    <label>
+        <input type="radio"
+               name="q6"
+               value="D">
+        Opaque
+    </label>
+
+</div>
+
+
+<!-- QUESTION 7 -->
+
+<div class="question-card">
+
+    <h3>
+        7. Two resistors connected in series have:
+    </h3>
+
+    <label>
+        <input type="radio"
+               name="q7"
+               value="A">
+        R = R₁ + R₂
+    </label>
+
+    <label>
+        <input type="radio"
+               name="q7"
+               value="B">
+        R = R₁ − R₂
+    </label>
+
+    <label>
+        <input type="radio"
+               name="q7"
+               value="C">
+        R = R₁ × R₂
+    </label>
+
+    <label>
+        <input type="radio"
+               name="q7"
+               value="D">
+        R = R₁ / R₂
+    </label>
+
+</div>
+
+
+<!-- QUESTION 8 -->
+
+<div class="question-card">
+
+    <h3>
+        8. The approximate pH of pure water is:
+    </h3>
+
+    <label>
+        <input type="radio"
+               name="q8"
+               value="A">
+        1
+    </label>
+
+    <label>
+        <input type="radio"
+               name="q8"
+               value="B">
+        5
+    </label>
+
+    <label>
+        <input type="radio"
+               name="q8"
+               value="C">
+        7
+    </label>
+
+    <label>
+        <input type="radio"
+               name="q8"
+               value="D">
+        14
+    </label>
+
+</div>
+
+
+<!-- QUESTION 9 -->
+
+<div class="question-card">
+
+    <h3>
+        9. If V = 12 V and R = 6 Ω,
+        what is the current?
+    </h3>
+
+    <label>
+        <input type="radio"
+               name="q9"
+               value="A">
+        0.5 A
+    </label>
+
+    <label>
+        <input type="radio"
+               name="q9"
+               value="B">
+        2 A
+    </label>
+
+    <label>
+        <input type="radio"
+               name="q9"
+               value="C">
+        6 A
+    </label>
+
+    <label>
+        <input type="radio"
+               name="q9"
+               value="D">
+        18 A
+    </label>
+
+</div>
+
+
+<!-- QUESTION 10 -->
+
+<div class="question-card">
+
+    <h3>
+        10. In a parallel circuit,
+        each branch has the same:
+    </h3>
+
+    <label>
+        <input type="radio"
+               name="q10"
+               value="A">
+        Current
+    </label>
+
+    <label>
+        <input type="radio"
+               name="q10"
+               value="B">
+        Voltage
+    </label>
+
+    <label>
+        <input type="radio"
+               name="q10"
+               value="C">
+        Resistance
+    </label>
+
+    <label>
+        <input type="radio"
+               name="q10"
+               value="D">
+        Power
+    </label>
+
+</div>
+
+
+<!-- BUTTONS -->
+
+<div class="quiz-buttons">
+
+    <button type="button"
+            class="btn"
+            onclick="checkQuiz()">
+        Submit Quiz
+    </button>
+
+    <button type="button"
+            class="btn secondary"
+            onclick="resetQuiz()">
+        Reset
+    </button>
+
+</div>
+
+
+</form>
+
+
+<!-- RESULT -->
+
+<div id="quizResult"
+     class="quiz-result">
+</div>
+
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        © 2026 Virtual Science Lab
+    </p>
+
+    <p>
+        BSc IT Web Development Project
+    </p>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+</body>
+
+</html>

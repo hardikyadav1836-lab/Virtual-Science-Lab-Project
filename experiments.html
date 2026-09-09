@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experiments | Virtual Science Lab</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🧪 Virtual Science Lab</div>
+
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    <nav id="nav">
+        <a href="index.html">Home</a>
+        <a href="experiments.html" class="active">Experiments</a>
+        <a href="lab.html">Virtual Lab</a>
+        <a href="quiz.html">Quiz</a>
+        <a href="about.html">About</a>
+    </nav>
+
+    <button class="theme-btn" onclick="toggleTheme()">🌙</button>
+</header>
+
+
+<main>
+
+<section class="page-header">
+
+    <p class="eyebrow">VIRTUAL LABORATORY</p>
+
+    <h1>Interactive Experiments</h1>
+
+    <p>
+        Choose an experiment and explore scientific
+        concepts using interactive simulations.
+    </p>
+
+</section>
+
+
+<section class="experiment-grid">
+
+
+    <!-- OHM'S LAW -->
+
+    <article class="experiment-card">
+
+        <div class="experiment-icon">⚡</div>
+
+        <span class="badge">PHYSICS</span>
+
+        <h2>Ohm's Law</h2>
+
+        <p>
+            Study the relationship between voltage,
+            current and resistance using Ohm's Law.
+        </p>
+
+        <div class="formula">
+            V = I × R
+        </div>
+
+        <ul>
+            <li>Change voltage</li>
+            <li>Change resistance</li>
+            <li>Calculate current</li>
+            <li>Record observations</li>
+        </ul>
+
+        <a href="lab.html#ohm" class="btn">
+            Start Experiment →
+        </a>
+
+    </article>
+
+
+    <!-- ACID AND BASE -->
+
+    <article class="experiment-card">
+
+        <div class="experiment-icon">🧪</div>
+
+        <span class="badge">CHEMISTRY</span>
+
+        <h2>Acid & Base</h2>
+
+        <p>
+            Explore acidic, neutral and basic solutions
+            using the pH scale.
+        </p>
+
+        <div class="formula">
+            pH = -log[H⁺]
+        </div>
+
+        <ul>
+            <li>Select a solution</li>
+            <li>Observe pH value</li>
+            <li>Identify acid or base</li>
+            <li>Observe indicator change</li>
+        </ul>
+
+        <a href="lab.html#ph" class="btn">
+            Start Experiment →
+        </a>
+
+    </article>
+
+
+    <!-- CONVEX LENS -->
+
+    <article class="experiment-card">
+
+        <div class="experiment-icon">🔭</div>
+
+        <span class="badge">PHYSICS</span>
+
+        <h2>Convex Lens</h2>
+
+        <p>
+            Investigate image formation by changing
+            focal length and object distance.
+        </p>
+
+        <div class="formula">
+            1/f = 1/v − 1/u
+        </div>
+
+        <ul>
+            <li>Change focal length</li>
+            <li>Change object distance</li>
+            <li>Calculate image distance</li>
+            <li>Calculate magnification</li>
+        </ul>
+
+        <a href="lab.html#lens" class="btn">
+            Start Experiment →
+        </a>
+
+    </article>
+
+
+    <!-- SERIES AND PARALLEL -->
+
+    <article class="experiment-card">
+
+        <div class="experiment-icon">🔌</div>
+
+        <span class="badge">PHYSICS</span>
+
+        <h2>Series & Parallel</h2>
+
+        <p>
+            Compare equivalent resistance and current
+            in series and parallel circuits.
+        </p>
+
+        <div class="formula">
+            Series: R = R₁ + R₂
+        </div>
+
+        <ul>
+            <li>Choose circuit type</li>
+            <li>Change resistor values</li>
+            <li>Calculate equivalent resistance</li>
+            <li>Calculate total current</li>
+        </ul>
+
+        <a href="lab.html#circuit" class="btn">
+            Start Experiment →
+        </a>
+
+    </article>
+
+</section>
+
+
+<section class="info-section">
+
+    <div class="info-box">
+
+        <div class="info-icon">💡</div>
+
+        <div>
+
+            <h2>How does the Virtual Lab work?</h2>
+
+            <p>
+                Select an experiment and adjust the
+                available controls. The calculations
+                are performed instantly using JavaScript.
+                This allows you to observe how changing
+                one variable affects the final result.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <p>© 2026 Virtual Science Lab</p>
+    <p>BSc IT Web Development Project</p>
+
+</footer>
+
+
+<script src="js/script.js"></script>
+
+</body>
+</html>

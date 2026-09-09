@@ -1,0 +1,1391 @@
+/* =========================================
+   VIRTUAL SCIENCE LAB
+   Main Stylesheet
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f5f7fb;
+    color: #182033;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+select {
+    font: inherit;
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    min-height: 70px;
+    padding: 12px 5%;
+
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid #e3e7ef;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+nav {
+    margin-left: auto;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+nav a {
+    padding: 9px 13px;
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #5d6678;
+
+    transition: 0.2s;
+}
+
+nav a:hover,
+nav a.active {
+    background: #e8efff;
+    color: #315eea;
+}
+
+.theme-btn,
+.menu-btn {
+    border: 0;
+    cursor: pointer;
+
+    width: 40px;
+    height: 40px;
+
+    border-radius: 10px;
+
+    background: #edf1f7;
+}
+
+.menu-btn {
+    display: none;
+}
+
+
+/* =========================================
+   HERO
+   ========================================= */
+
+.hero {
+    min-height: 570px;
+    padding: 80px 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+
+    background:
+        radial-gradient(
+            circle at 80% 30%,
+            #dce7ff,
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #eef3ff
+        );
+}
+
+.hero-content {
+    max-width: 680px;
+}
+
+.eyebrow {
+    margin-bottom: 12px;
+
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+
+    color: #315eea;
+}
+
+.hero h1 {
+    margin-bottom: 20px;
+
+    font-size: clamp(42px, 7vw, 76px);
+    line-height: 1.05;
+}
+
+.hero h1 span {
+    color: #315eea;
+}
+
+.hero-text {
+    max-width: 600px;
+    margin-bottom: 30px;
+
+    font-size: 18px;
+    color: #5d6678;
+}
+
+.buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 46px;
+    padding: 12px 20px;
+
+    border: 0;
+    border-radius: 10px;
+
+    background: #315eea;
+    color: white;
+
+    font-weight: 700;
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+.btn.secondary {
+    background: #e8edf6;
+    color: #26334d;
+}
+
+.hero-icon {
+    width: 260px;
+    height: 260px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: white;
+
+    font-size: 120px;
+
+    box-shadow:
+        0 25px 60px rgba(30, 50, 100, 0.15);
+
+    animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+}
+
+
+/* =========================================
+   GENERAL SECTIONS
+   ========================================= */
+
+.section {
+    padding: 80px 7%;
+}
+
+.section-title {
+    max-width: 650px;
+    margin: 0 auto 40px;
+
+    text-align: center;
+}
+
+.section-title h2,
+.page-header h1 {
+    margin-bottom: 12px;
+
+    font-size: clamp(30px, 5vw, 46px);
+}
+
+.section-title p:not(.eyebrow),
+.page-header > p:last-child {
+    color: #697386;
+}
+
+
+/* =========================================
+   PAGE HEADER
+   ========================================= */
+
+.page-header {
+    padding: 70px 7%;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #edf2ff
+        );
+}
+
+.page-header p:last-child {
+    max-width: 650px;
+    margin: auto;
+}
+
+
+/* =========================================
+   CARDS
+   ========================================= */
+
+.cards {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.card,
+.experiment-card,
+.about-card,
+.lab-card,
+.question-card {
+    background: white;
+
+    border: 1px solid #e5e9f1;
+    border-radius: 16px;
+
+    box-shadow:
+        0 8px 30px rgba(30, 45, 80, 0.06);
+}
+
+.card {
+    padding: 28px;
+}
+
+.card-icon {
+    margin-bottom: 15px;
+    font-size: 38px;
+}
+
+.card h3 {
+    margin-bottom: 8px;
+}
+
+.card p,
+.experiment-card p,
+.about-card p {
+    color: #697386;
+}
+
+
+/* =========================================
+   STATS
+   ========================================= */
+
+.stats {
+    padding: 40px 7%;
+
+    display: grid;
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+
+    background: #182033;
+    color: white;
+
+    text-align: center;
+}
+
+.stats strong {
+    display: block;
+
+    font-size: 34px;
+}
+
+.stats span {
+    color: #b7c0d1;
+}
+
+
+/* =========================================
+   FEATURE GRID
+   ========================================= */
+
+.feature-grid {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 18px;
+}
+
+.feature {
+    padding: 22px;
+
+    display: flex;
+    gap: 18px;
+
+    background: white;
+
+    border: 1px solid #e5e9f1;
+    border-radius: 14px;
+}
+
+.feature > span {
+    font-size: 32px;
+}
+
+.feature h3 {
+    margin-bottom: 5px;
+}
+
+.feature p {
+    color: #697386;
+}
+
+
+/* =========================================
+   EXPERIMENT PAGE
+   ========================================= */
+
+.experiment-grid {
+    max-width: 1150px;
+    margin: 60px auto;
+    padding: 0 5%;
+
+    display: grid;
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 25px;
+}
+
+.experiment-card {
+    padding: 28px;
+}
+
+.experiment-icon {
+    margin-bottom: 12px;
+    font-size: 45px;
+}
+
+.badge {
+    display: inline-block;
+
+    margin-bottom: 12px;
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+    background: #e9efff;
+    color: #315eea;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.experiment-card h2 {
+    margin-bottom: 10px;
+}
+
+.experiment-card ul,
+.about-card ul {
+    margin: 18px 0;
+    padding-left: 20px;
+
+    color: #5e687a;
+}
+
+.formula {
+    margin: 18px 0;
+    padding: 12px;
+
+    border-radius: 8px;
+
+    background: #f0f3f8;
+
+    text-align: center;
+
+    font-weight: 800;
+}
+
+
+/* =========================================
+   INFO BOX
+   ========================================= */
+
+.info-section {
+    padding: 50px 7%;
+}
+
+.info-box {
+    max-width: 1050px;
+    margin: auto;
+    padding: 25px;
+
+    display: flex;
+    gap: 20px;
+
+    background: #eef3ff;
+
+    border: 1px solid #dce5ff;
+    border-radius: 16px;
+}
+
+.info-icon {
+    font-size: 35px;
+}
+
+.info-box h2 {
+    margin-bottom: 5px;
+}
+
+.info-box p {
+    color: #59657a;
+}
+
+
+/* =========================================
+   VIRTUAL LAB
+   ========================================= */
+
+.lab-navigation {
+    position: sticky;
+    top: 70px;
+    z-index: 100;
+
+    padding: 12px 5%;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    background: white;
+    border-bottom: 1px solid #e3e7ef;
+}
+
+.lab-link {
+    padding: 9px 13px;
+
+    border-radius: 8px;
+
+    background: #f0f3f8;
+
+    color: #536075;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.lab-link:hover,
+.lab-link.active {
+    background: #315eea;
+    color: white;
+}
+
+.lab-section {
+    max-width: 1150px;
+    margin: auto;
+    padding: 70px 5%;
+
+    scroll-margin-top: 130px;
+}
+
+.lab-title {
+    margin-bottom: 25px;
+}
+
+.lab-title h2 {
+    margin-bottom: 8px;
+
+    font-size: 32px;
+}
+
+.lab-title p {
+    color: #697386;
+}
+
+.lab-layout {
+    display: grid;
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 22px;
+}
+
+.lab-card {
+    padding: 25px;
+}
+
+.lab-card h3 {
+    margin-bottom: 20px;
+}
+
+
+/* =========================================
+   CONTROLS
+   ========================================= */
+
+.control-group {
+    margin-bottom: 25px;
+}
+
+.control-group label {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 8px;
+
+    font-weight: 700;
+}
+
+input[type="range"] {
+    width: 100%;
+
+    accent-color: #315eea;
+
+    cursor: pointer;
+}
+
+select {
+    width: 100%;
+    padding: 12px;
+
+    border: 1px solid #d9deea;
+    border-radius: 9px;
+
+    background: white;
+    color: #202a3d;
+}
+
+
+/* =========================================
+   FORMULA & RESULTS
+   ========================================= */
+
+.formula-box {
+    margin: 20px 0;
+    padding: 15px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: #f0f3f8;
+
+    border-radius: 10px;
+}
+
+.formula-box span {
+    color: #687287;
+}
+
+.formula-box strong {
+    font-size: 18px;
+}
+
+.result-box {
+    padding: 22px;
+
+    border-radius: 12px;
+
+    background: #eef3ff;
+
+    text-align: center;
+}
+
+.result-box small {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    color: #64708a;
+}
+
+.result-box > strong {
+    display: block;
+
+    margin: 5px 0;
+
+    font-size: 34px;
+
+    color: #315eea;
+}
+
+.result-box span {
+    color: #59657a;
+}
+
+
+/* =========================================
+   CIRCUIT DISPLAY
+   ========================================= */
+
+.circuit-display {
+    min-height: 190px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+}
+
+.component {
+    min-width: 70px;
+    padding: 15px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-radius: 10px;
+
+    background: #f0f3f8;
+
+    font-size: 28px;
+    font-weight: 800;
+}
+
+.component small {
+    margin-top: 5px;
+
+    font-size: 10px;
+    color: #667086;
+}
+
+.wire {
+    width: 40px;
+    height: 4px;
+
+    background: #315eea;
+}
+
+
+/* =========================================
+   OBSERVATION
+   ========================================= */
+
+.observation {
+    margin-top: 20px;
+    padding: 16px;
+
+    border-left: 4px solid #315eea;
+
+    background: #f7f8fb;
+}
+
+.observation h3 {
+    margin-bottom: 5px;
+}
+
+.observation p {
+    color: #687287;
+}
+
+
+/* =========================================
+   PH SCALE
+   ========================================= */
+
+.ph-scale {
+    margin-top: 25px;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-weight: 700;
+}
+
+.ph-indicator {
+    height: 18px;
+    margin: 8px 0 20px;
+
+    position: relative;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            to right,
+            #e76f51,
+            #f4a261,
+            #f6d365,
+            #90be6d,
+            #277da1
+        );
+}
+
+.ph-marker {
+    position: absolute;
+
+    top: -5px;
+
+    width: 28px;
+    height: 28px;
+
+    border: 3px solid white;
+    border-radius: 50%;
+
+    background: #182033;
+
+    box-shadow: 0 2px 8px #555;
+}
+
+
+/* =========================================
+   BEAKER
+   ========================================= */
+
+.beaker {
+    width: 150px;
+    height: 190px;
+
+    margin: 20px auto;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border: 5px solid #aeb7c8;
+    border-top: 0;
+
+    border-radius:
+        0 0 25px 25px;
+}
+
+.liquid {
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 70%;
+
+    background: #e76f51;
+
+    transition: 0.4s;
+}
+
+.center {
+    text-align: center;
+}
+
+
+/* =========================================
+   LENS
+   ========================================= */
+
+.lens-simulation {
+    height: 230px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            transparent 49%,
+            #b8c0ce 50%,
+            transparent 51%
+        );
+}
+
+.lens-axis {
+    position: absolute;
+
+    width: 100%;
+    height: 2px;
+
+    background: #b8c0ce;
+}
+
+.convex-lens {
+    position: relative;
+    z-index: 2;
+
+    padding: 30px 15px;
+
+    border-left: 5px solid #315eea;
+    border-right: 5px solid #315eea;
+
+    border-radius: 50%;
+
+    background: #dce7ff;
+
+    color: #315eea;
+
+    font-size: 30px;
+}
+
+.object-arrow,
+.image-arrow {
+    position: absolute;
+
+    font-size: 55px;
+    font-weight: bold;
+}
+
+.object-arrow {
+    left: 18%;
+}
+
+.image-arrow {
+    right: 18%;
+}
+
+
+/* =========================================
+   CIRCUIT BUTTONS
+   ========================================= */
+
+.circuit-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.circuit-btn {
+    flex: 1;
+
+    padding: 11px;
+
+    border: 0;
+    border-radius: 9px;
+
+    background: #edf1f7;
+
+    cursor: pointer;
+
+    font-weight: 700;
+}
+
+.circuit-btn.selected {
+    background: #315eea;
+    color: white;
+}
+
+
+/* =========================================
+   QUIZ
+   ========================================= */
+
+.quiz-container {
+    max-width: 850px;
+    margin: 50px auto;
+    padding: 0 5%;
+}
+
+.question-card {
+    margin-bottom: 20px;
+    padding: 25px;
+}
+
+.question-card h3 {
+    margin-bottom: 18px;
+}
+
+.question-card label {
+    display: block;
+
+    margin: 10px 0;
+    padding: 10px;
+
+    border-radius: 8px;
+
+    background: #f5f7fb;
+
+    cursor: pointer;
+}
+
+.question-card label:hover {
+    background: #eaf0ff;
+}
+
+.question-card input {
+    margin-right: 8px;
+}
+
+.quiz-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+
+    margin: 30px 0;
+}
+
+.quiz-result {
+    display: none;
+
+    margin: 25px 0;
+    padding: 25px;
+
+    border-radius: 15px;
+
+    background: #eef3ff;
+
+    text-align: center;
+}
+
+.quiz-result.show {
+    display: block;
+}
+
+.quiz-result h2 {
+    color: #315eea;
+}
+
+
+/* =========================================
+   ABOUT PAGE
+   ========================================= */
+
+.about-grid {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 5%;
+
+    display: grid;
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 22px;
+}
+
+.about-card {
+    padding: 28px;
+}
+
+.about-icon {
+    margin-bottom: 10px;
+
+    font-size: 40px;
+}
+
+.about-card h2 {
+    margin-bottom: 12px;
+}
+
+.student-section {
+    padding: 40px 7%;
+}
+
+.student-card {
+    max-width: 900px;
+    margin: auto;
+    padding: 30px;
+
+    display: flex;
+    align-items: center;
+    gap: 25px;
+
+    background: #182033;
+    color: white;
+
+    border-radius: 18px;
+}
+
+.student-icon {
+    font-size: 65px;
+}
+
+.student-details p {
+    margin: 5px 0;
+    color: #c5ccda;
+}
+
+.steps {
+    max-width: 900px;
+    margin: auto;
+}
+
+.step {
+    padding: 20px 0;
+
+    display: flex;
+    gap: 20px;
+
+    border-bottom: 1px solid #e1e5ed;
+}
+
+.step > span {
+    width: 45px;
+    height: 45px;
+
+    flex-shrink: 0;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: #315eea;
+    color: white;
+
+    font-weight: 800;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    padding: 30px 7%;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+
+    background: #182033;
+    color: #b9c2d2;
+
+    font-size: 13px;
+}
+
+
+/* =========================================
+   DARK MODE
+   ========================================= */
+
+body.dark {
+    background: #101522;
+    color: #edf1f8;
+}
+
+body.dark header,
+body.dark .lab-navigation {
+    background: #171d2b;
+    border-color: #293246;
+}
+
+body.dark nav a {
+    color: #bbc4d5;
+}
+
+body.dark nav a:hover,
+body.dark nav a.active {
+    background: #26365f;
+    color: #8eacff;
+}
+
+body.dark .theme-btn,
+body.dark .menu-btn {
+    background: #252d3e;
+    color: white;
+}
+
+body.dark .hero,
+body.dark .page-header {
+    background:
+        linear-gradient(
+            135deg,
+            #151c2b,
+            #202a43
+        );
+}
+
+body.dark .hero-text,
+body.dark .section-title p:not(.eyebrow),
+body.dark .page-header > p:last-child {
+    color: #b7c0d1;
+}
+
+body.dark .card,
+body.dark .experiment-card,
+body.dark .about-card,
+body.dark .lab-card,
+body.dark .question-card,
+body.dark .feature {
+    background: #171d2b;
+    border-color: #293246;
+}
+
+body.dark .formula,
+body.dark .formula-box,
+body.dark .component,
+body.dark .observation,
+body.dark .question-card label {
+    background: #222a3b;
+}
+
+body.dark .formula-box span,
+body.dark .observation p,
+body.dark .result-box span,
+body.dark .card p,
+body.dark .experiment-card p,
+body.dark .about-card p,
+body.dark .about-card ul,
+body.dark .feature p {
+    color: #aeb8ca;
+}
+
+body.dark select {
+    background: #171d2b;
+    color: white;
+    border-color: #354057;
+}
+
+body.dark .btn.secondary {
+    background: #293246;
+    color: white;
+}
+
+body.dark .info-box {
+    background: #1d2943;
+    border-color: #2d3d64;
+}
+
+body.dark .info-box p {
+    color: #b7c0d1;
+}
+
+body.dark .lab-link {
+    background: #252d3e;
+    color: #c0c8d7;
+}
+
+body.dark .lab-link.active,
+body.dark .lab-link:hover {
+    background: #315eea;
+    color: white;
+}
+
+body.dark .circuit-btn {
+    background: #252d3e;
+    color: white;
+}
+
+body.dark .student-card,
+body.dark footer,
+body.dark .stats {
+    background: #090d15;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 850px) {
+
+    header {
+        flex-wrap: wrap;
+    }
+
+    .menu-btn {
+        display: block;
+        margin-left: auto;
+    }
+
+    nav {
+        display: none;
+
+        width: 100%;
+
+        flex-direction: column;
+        align-items: stretch;
+
+        margin-left: 0;
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    nav a {
+        text-align: center;
+    }
+
+    .theme-btn {
+        order: 2;
+    }
+
+    .hero {
+        padding: 60px 6%;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%;
+    }
+
+    .hero-text {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .hero-icon {
+        width: 190px;
+        height: 190px;
+        font-size: 85px;
+    }
+
+    .cards,
+    .experiment-grid,
+    .lab-layout,
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .student-card {
+        align-items: flex-start;
+    }
+
+}
+
+
+@media (max-width: 500px) {
+
+    header {
+        padding: 10px 4%;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .hero {
+        min-height: 520px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .section {
+        padding: 55px 5%;
+    }
+
+    .page-header {
+        padding: 55px 5%;
+    }
+
+    .stats {
+        padding: 30px 5%;
+        gap: 10px;
+    }
+
+    .stats strong {
+        font-size: 27px;
+    }
+
+    .lab-section {
+        padding: 50px 4%;
+    }
+
+    .lab-navigation {
+        justify-content: flex-start;
+        overflow-x: auto;
+        flex-wrap: nowrap;
+    }
+
+    .lab-link {
+        flex-shrink: 0;
+    }
+
+    .circuit-display {
+        transform: scale(0.85);
+    }
+
+    .student-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .quiz-buttons {
+        flex-direction: column;
+    }
+
+    .quiz-buttons .btn {
+        width: 100%;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
